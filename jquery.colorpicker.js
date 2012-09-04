@@ -636,6 +636,10 @@
                 };
 
                 this.update = function () {
+                    var scale = $(e).height() / 256;
+                    $('.ui-colorpicker-map-layer-1, .ui-colorpicker-map-layer-2', e)
+                        .css('background-size', (256*scale)+'px auto');
+
                     switch (inst.mode) {
                     case 'h':
                         $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 0', 'opacity': ''}).show();
@@ -644,29 +648,29 @@
 
                     case 's':
                     case 'a':
-                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -260px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -520px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -'+(260*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -'+(520*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'v':
                         $(e).css('background-color', 'black');
-                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -780px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -'+(780*scale)+'px', 'opacity': ''}).show();
                         $('.ui-colorpicker-map-layer-2', e).hide();
                         break;
 
                     case 'r':
-                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -1040px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -1300px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -'+(1040*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -'+(1300*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'g':
-                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -1560px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -1820px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -'+(1560*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -'+(1820*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'b':
-                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -2080px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -2340px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-1', e).css({'background-position': '0 -'+(2080*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-map-layer-2', e).css({'background-position': '0 -'+(2340*scale)+'px', 'opacity': ''}).show();
                         break;
                     }
                     that.repaint();
@@ -836,6 +840,10 @@
                 };
 
                 this.update = function () {
+                    var scale = $(e).height() / 256;
+                    $('.ui-colorpicker-bar-layer-1, .ui-colorpicker-bar-layer-2, .ui-colorpicker-bar-layer-3, .ui-colorpicker-bar-layer-4', e)
+                        .css('background-size', (1*scale)+'px auto');
+
                     switch (inst.mode) {
                     case 'h':
                     case 's':
@@ -862,38 +870,38 @@
                         break;
 
                     case 's':
-                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -260px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -520px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -'+(260*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -'+(520*scale)+'px', 'opacity': ''}).show();
                         $('.ui-colorpicker-bar-layer-3', e).hide();
                         $('.ui-colorpicker-bar-layer-4', e).hide();
                         break;
 
                     case 'v':
-                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -520px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -'+(520*scale)+'px', 'opacity': ''}).show();
                         $('.ui-colorpicker-bar-layer-2', e).hide();
                         $('.ui-colorpicker-bar-layer-3', e).hide();
                         $('.ui-colorpicker-bar-layer-4', e).hide();
                         break;
 
                     case 'r':
-                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -1560px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -1300px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -780px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -1040px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -'+(1560*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -'+(1300*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -'+(780*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -'+(1040*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'g':
-                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -2600px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -2340px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -1820px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -2080px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -'+(2600*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -'+(2340*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -'+(1820*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -'+(2080*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'b':
-                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -3640px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -3380px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -2860px', 'opacity': ''}).show();
-                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -3120px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-1', e).css({'background-position': '0 -'+(3640*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-2', e).css({'background-position': '0 -'+(3380*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-3', e).css({'background-position': '0 -'+(2860*scale)+'px', 'opacity': ''}).show();
+                        $('.ui-colorpicker-bar-layer-4', e).css({'background-position': '0 -'+(3120*scale)+'px', 'opacity': ''}).show();
                         break;
 
                     case 'a':
